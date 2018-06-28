@@ -8,12 +8,12 @@ class Cart extends Component {
     return (
       <div> 
       
-      {this.props.cart.length === 0 && <h1>your cart is empty</h1>}
+     {this.props.cart.length === 0 && <h2>your cart is empty</h2>}
 
       {this.props.cart.length > 0 && (
         <div>
              {this.props.cart.map((items, index) => (
-              <li key={items.id}>
+              <ul key={items.name}>
                 
               <div class="container"> 
                 <div><strong><img src={items.url} alt=""/></strong></div> 
@@ -21,7 +21,7 @@ class Cart extends Component {
                    <button onClick={() => this.props.onRemoveItem(items, index)} className='item-add'>remove</button>
                   
               </div>
-              </li>
+              </ul>
             )
           )
         }

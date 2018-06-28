@@ -17,7 +17,7 @@ class ItemList extends Component {
 
     <ul className='list'>
       {this.props.items.map((items, index) => (
-        <li key={items.name}>
+        <ul key={items.name}>
           
         <div class="container"> 
           <div><strong><img src={items.url} alt=""/></strong>
@@ -28,7 +28,7 @@ class ItemList extends Component {
               <button onClick={() => this.props.onAddItem(items)} className='item-add'>ADD TO CART</button>
               
             </div>
-          </li> 
+          </ul> 
         )
       )}
     </ul>
